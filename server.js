@@ -28,9 +28,11 @@ app.get('/', (req, res) => {
     res.render('index.ejs')
 })
 
-app.get('/about', (요청, 응답) => {
-    응답.sendFile(__dirname + '/about.html')
+app.get('/login',(req, res)=>{
+    res.render('login.ejs')
 })
+
+
 
 app.get('/list', async (요청, 응답) => {
     let result = await db.collection('post').find().toArray()
@@ -127,3 +129,6 @@ app.get('/list/next/:id', async (요청, 응답) => {
     .limit(5).toArray()
     응답.render('list.ejs', { 글목록: result })
 })
+
+
+
