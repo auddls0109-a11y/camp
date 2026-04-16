@@ -9,9 +9,10 @@ app.use(express.static(__dirname + '/public'))
 app.set('view engine', 'ejs')
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+require('dotenv').config();
 
 let db;
-const url = 'mongodb+srv://auddls0109_db_user:YReauOUVG4uTtfh7@cluster0.jsrmsuv.mongodb.net/?appName=Cluster0'
+const url = DB_URL
 new MongoClient(url).connect().then((client) => {
     console.log('DB연결성공')
     db = client.db('forum');
