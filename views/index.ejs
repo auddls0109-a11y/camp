@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FUNCAMP</title>
+  <!-- 메인 스타일 파일 연결 -->
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+
+  <%- include('nav.ejs') %>
+    <main>
+      <!-- 히어로 섹션: 사이트 핵심 메시지 -->
+      <section class="hero">
+        <div class="container hero-content">
+          <h2>FUNCAMP 파워뱅크 전문</h2>
+          <p>
+            캠핑, 차박, 아웃도어 환경에서 편리한 전기 사용을 위한 올인원 파워뱅크와
+            차량 맞춤 설치 서비스를 제공합니다.
+          </p>
+          <div class="hero-buttons">
+            <a href="#shop" class="btn primary">Go Shop</a>
+            <a href="#car-installation" class="btn ghost">More Info</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Factory Story 소개 섹션 -->
+      <section id="factory-story" class="section">
+        <div class="container">
+          <h3>Factory Story</h3>
+          <p>
+            앞서가는 제품 설계와 풍부한 현장 경험을 기반으로 고객 차량에 최적화된
+            배터리/인버터 시스템을 설계 및 시공합니다.
+          </p>
+        </div>
+      </section>
+
+      <!-- Shop 섹션: 대표 상품 카드 -->
+      <section id="shop" class="section alt">
+        <div class="container">
+          <h3>Shop</h3>
+          <div class="card-grid">
+                 <a href="/product">
+            <article class="card">
+              <div class="thumb">
+                <img class="thumb-img" src="/img/2.png">
+              </div>
+              <h4>올인원 파워뱅크</h4>
+              <p>고용량 인산철 배터리 + 인버터 내장 모델</p>
+            </article>
+            </a>
+            <article class="card">
+              <div class="thumb">
+                <img class="thumb-img" src="/img/3.png">
+              </div>
+              <h4>차량 설치 패키지</h4>
+              <p>차종별 컨트롤 패널 및 배터리 매립 커스텀</p>
+            </article>
+            <article class="card">
+              <div class="thumb">
+                <img class="thumb-img" src="/img/4.png">
+              </div>
+              <h4>액세서리</h4>
+              <p>점프 케이블, 멀티 스테이션 등 확장 옵션</p>
+            </article>
+
+          </div>
+          <div style="text-align: center; margin-top: 40px;">
+            <a href="/shop" class="btn btn-primary">전체 상품 보기</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Car Installation 섹션: 작업 포트폴리오 느낌의 그리드 -->
+      <section id="car-installation" class="section">
+        <div class="container">
+          <h3>Car Installation</h3>
+          <p class="section-desc">
+            인산철 배터리 매립, 주행충전기, 무시동히터, 평탄화 작업까지
+            차량별로 맞춤 시공합니다.
+          </p>
+          <div class="install-grid">
+            <article class="install-item">
+              <h4>레이 평탄화</h4>
+              <p>1분 셋업 가능한 차박 전용 구조</p>
+            </article>
+            <article class="install-item">
+              <h4>매립형 컨트롤패널</h4>
+              <p>차종 맞춤 커스텀 설계</p>
+            </article>
+            <article class="install-item">
+              <h4>타스만 적재함 셋팅</h4>
+              <p>실용성과 스타일을 동시에 확보</p>
+            </article>
+            <article class="install-item">
+              <h4>쏘렌토 하이브리드</h4>
+              <p>트렁크 공간 활용 매립 시공</p>
+            </article>
+            <article class="install-item">
+              <h4>산타페 풀세트</h4>
+              <p>히터 + 평탄화 + 배터리 + 컨트롤패널</p>
+            </article>
+            <article class="install-item">
+              <h4>JEEP 레니게이드</h4>
+              <p>컨트롤 패널 통합 설치</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 리뷰 섹션 -->
+      <section id="community" class="section alt">
+        <div class="container">
+          <h3>Review</h3>
+          <div id="reviewList" class="review-list">
+
+            
+          </div>
+          <!-- 리뷰 페이지네이션: JS가 현재 페이지 표시 처리 -->
+          <div class="pagination" id="reviewPagination">
+            <button id="reviewPrev" class="page-btn" type="button">이전</button>
+            <button class="page-number active" type="button" data-page="1">1</button>
+            <button class="page-number" type="button" data-page="2">2</button>
+            <button class="page-number" type="button" data-page="3">3</button>
+            <button class="page-number" type="button" data-page="4">4</button>
+            <button class="page-number" type="button" data-page="5">5</button>
+            <button id="reviewNext" class="page-btn" type="button">다음</button>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- FAQ 섹션: 아코디언 구조 -->
+      <section class="section">
+        <div class="container">
+          <h3>FAQ</h3>
+          <div class="faq-list">
+            <details>
+              <summary>Q. 충전은 전원을 끄고 하나요?</summary>
+              <p>A. 제품 모델에 따라 권장 방식이 다르므로 매뉴얼 기준으로 진행하세요.</p>
+            </details>
+            <details>
+              <summary>Q. 잔량이 남아있는데 전원이 꺼졌습니다. 고장인가요?</summary>
+              <p>A. 보호회로 동작 가능성이 있으니 셀 밸런싱 및 점검을 권장합니다.</p>
+            </details>
+            <details>
+              <summary>Q. 장기간 미사용 시 보관 방법은?</summary>
+              <p>A. 40~60% 잔량 상태 보관과 정기 점검을 권장합니다.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work Log 섹션 -->
+      <section class="section alt">
+        <div class="container">
+          <h3>Work Log</h3>
+          <div class="log-grid">
+            <article class="log-item">
+              <div class="thumb">
+                <img class="thumb-img" src="/img/7.png">
+              </div>레이 전기차 차박 평탄화 작업
+            </article>
+            <article class="log-item">
+              <div class="thumb">
+                <img class="thumb-img" src="/img/1.png">
+              </div>레이 전용 파워뱅크 + 평탄화
+            </article>
+            <article class="log-item">
+              <div class="thumb">
+                <img class="thumb-img" src="/img/2.png">
+              </div>신규 차량 인산철 배터리 매립 작업
+            </article>
+            <article class="log-item">
+              <div class="thumb">
+                <img class="thumb-img" src="/img/3.png">
+              </div>컨트롤 패널 일체형 시공 케이스
+            </article>
+            <article class="log-item">
+              <div class="thumb">
+                <img class="thumb-img" src="/img/4.png">
+              </div>컨트롤 패널 일체형 시공 케이스
+            </article>
+            <article class="log-item">
+              <div class="thumb">
+                <img class="thumb-img" src="/img/5.png">
+              </div>컨트롤 패널 일체형 시공 케이스
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('footer.ejs') %>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <%- include('nav.ejs') %>
+
+        <form class="form-box" action="/edit?_method=PUT" method="POST">
+            <h4>수정하기</h4>
+            <input name="id" value="<%= result._id%>" readonly>
+            <input name="title" value="<%=result.title%>">
+            <input name="content" value="<%=result.content%>">
+            <button type="submit">전송</button>
+        </form>
+
+
+
+</body>
+
+
+
+</body>
+
+</html>

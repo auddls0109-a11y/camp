@@ -1,0 +1,28 @@
+<!-- 상단 공지/유틸 바 -->
+  <div class="top-banner">
+    <p></p>
+    <div class="top-actions">
+
+        <% if(!user || !user.username){ %>
+            <a href="/login">LOGIN</a>
+        <% } else { %>
+            <a href="/#">CART(0)</a>
+            <a href="/mypage">MY</a>
+        <% } %>
+      
+    </div>
+  </div>
+<!-- 메인 헤더: 로고 + 네비게이션 -->
+<header class="site-header">
+    <div class="container header-inner">
+        <h1 class="logo"><a href="/">FUNCAMP</a></h1>
+        <button id="menuToggle" class="menu-toggle" aria-label="메뉴 열기">MENU</button>
+        <nav id="mainNav" class="main-nav">
+            <a href="/#factory-story">Factory Story</a>
+            <a href="/#shop">Shop</a>
+            <a href="/#car-installation">Car Installation</a>
+            <a href="/#community">Community</a>
+            <a href="/#contact">Contact</a>
+        </nav>
+    </div>
+</header>
